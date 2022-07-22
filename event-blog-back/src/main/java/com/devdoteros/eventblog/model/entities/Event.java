@@ -1,9 +1,15 @@
 package com.devdoteros.eventblog.model.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "events")
+@Getter
+@Setter
 public class Event {
 
     @Id
@@ -14,15 +20,13 @@ public class Event {
 
     private String image;
 
-    private int like;
+    private Integer likes;
 
-    private int dislike;
+    private Integer dislikes;
 
     private String duration;
 
     private String status;
 
-    @Column(name = "category_id")
-    private Long categoryId;
 
 }
