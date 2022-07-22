@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { EventoComponent } from './pages/evento/evento.component';
 import { AgregarComponent } from './pages/agregar/agregar.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
 
 
 
@@ -15,7 +16,8 @@ import { AgregarComponent } from './pages/agregar/agregar.component';
     HomeComponent,
        ListadoComponent,
        EventoComponent,
-       AgregarComponent
+       AgregarComponent,
+       BuscarComponent
   ],
   imports: [
     CommonModule,
