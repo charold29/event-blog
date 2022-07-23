@@ -2,12 +2,10 @@ package com.devdoteros.eventblog.model.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +33,7 @@ public class User {
     @Column(unique = true)
     private String username;
 
-    @Min(value = 0L)
+    @Range(max = 100L)
     private int age;
 
     @OneToMany
