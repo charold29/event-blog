@@ -4,10 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "category")
+@Table(name = "categories")
 @Getter
 @Setter
 public class Category {
@@ -19,13 +18,5 @@ public class Category {
     private String name;
 
     private String description;
-
-    @ManyToOne()
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne()
-    @JoinColumn(name = "event_id")
-    private Event event;
 
 }
