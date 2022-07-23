@@ -46,6 +46,11 @@ public class UserController {
             return ResponseEntity.badRequest()
                     .body(Collections.singletonMap("message", "Existe un usuario con ese correo"));
         }
+        // Validate repeated username
+        if (userService.findByUsername(user.getUsername()).isPresent()){
+            return ResponseEntity.badRequest()
+                    .body(Collections.singletonMap("message", "Existe usuario con ese username"));
+        }
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
     }
 
@@ -64,6 +69,13 @@ public class UserController {
                     !user.getEmail().isEmpty()) {
                 return ResponseEntity.badRequest()
                         .body(Collections.singletonMap("message", "Existe un usuario con ese correo"));
+            }
+            // When the username you want to replace already exists.
+            if (!user.getUsername().equalsIgnoreCase(userDb.getUsername()) &&
+                    userService.findByUsername(user.getUsername()).isPresent() &&
+                    !user.getUsername().isEmpty()) {
+                return ResponseEntity.badRequest()
+                        .body(Collections.singletonMap("message", "Existe un usuario con ese username"));
             }
             userDb.setName(user.getName());
             userDb.setEmail(user.getEmail());

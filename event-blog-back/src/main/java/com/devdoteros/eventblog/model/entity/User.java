@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class User {
     @Column(unique = true)
     private String username;
 
-    @NotBlank
+    @Min(value = 0L)
     private int age;
 
     @OneToMany
