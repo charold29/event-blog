@@ -1,6 +1,6 @@
-package com.devdoteros.eventblog.services;
+package com.devdoteros.eventblog.service;
 
-import com.devdoteros.eventblog.model.entities.User;
+import com.devdoteros.eventblog.model.entity.User;
 
 import java.util.List;
 import java.util.Optional;

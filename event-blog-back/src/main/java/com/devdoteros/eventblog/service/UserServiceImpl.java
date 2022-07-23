@@ -1,7 +1,7 @@
-package com.devdoteros.eventblog.services;
+package com.devdoteros.eventblog.service;
 
-import com.devdoteros.eventblog.model.entities.User;
-import com.devdoteros.eventblog.repositories.UserRepository;
+import com.devdoteros.eventblog.model.entity.User;
+import com.devdoteros.eventblog.repo.UserRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
