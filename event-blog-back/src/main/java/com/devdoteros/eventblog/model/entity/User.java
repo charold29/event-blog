@@ -36,6 +36,10 @@ public class User {
     @Range(max = 100L)
     private int age;
 
+    private boolean active;
+
+    private String roles;
+
     @OneToMany
     private List<Category> categories;
 
