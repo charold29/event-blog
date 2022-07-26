@@ -43,7 +43,8 @@ public class SecurityConfiguration {
                         .antMatchers("/admin").hasRole("ADMIN")
                         .antMatchers("/user").hasAnyRole("ADMIN","USER")
                         .antMatchers("/").permitAll()
-                        .and().formLogin();
+                        .and().formLogin()
+                        .and().csrf().disable();
         return http.build();
     }
 
