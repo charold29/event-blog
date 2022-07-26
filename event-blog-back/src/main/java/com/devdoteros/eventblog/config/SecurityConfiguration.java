@@ -2,7 +2,6 @@ package com.devdoteros.eventblog.config;
 
 import com.devdoteros.eventblog.config.service.UserDetailServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.NonUniqueObjectException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
