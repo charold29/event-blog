@@ -47,4 +47,17 @@ public class User {
         categories = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                ", active=" + active +
+                ", roles='" + roles + '\'' +
+                '}';
+    }
 }
